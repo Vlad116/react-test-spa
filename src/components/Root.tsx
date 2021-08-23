@@ -1,15 +1,11 @@
-import React from 'react'
-import { Router } from 'react-router'
-import { createBrowserHistory } from 'history'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'mobx-react'
 import App from './App'
-
-const history = createBrowserHistory()
 
 // и контектс стейта мб (провайдер)?
 const Root = (): JSX.Element => {
     return (
-        <Router history={history}>
+        <Router>
             <Provider>
                 <App />
             </Provider>

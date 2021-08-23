@@ -10,14 +10,14 @@ const useStyles = makeStyles(() => ({
     }
 }))
 
-export default function Projects() {
+export default function Substructures() {
     const classes = useStyles()
 
     return (
         <Grid container component="main" className={classes.root}>
             <CssBaseline />
             <Typography variant="body1" gutterBottom>
-                Projects page
+                Substructures page
             </Typography>
         </Grid>
     )

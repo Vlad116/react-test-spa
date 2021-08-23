@@ -1,5 +1,11 @@
 import React from 'react'
 import SignIn from '../pages/SignIn'
+import { Switch, Route } from 'react-router-dom'
+import ProtectedRoute from '../ProtectedRoute'
+import Login from '../pages/SignIn'
+import Projects from '../pages/Projects'
+import Structures from '../pages/Structures'
+import Substructure from '../pages/Substructure'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -21,14 +27,13 @@ const App = (): JSX.Element => {
     return (
         <Grid container component="main" className={styles.root}>
             <SignIn />
-            {/* <Switch> */}
-            {/* <Route exact path="/" component={noRequireAuth(HomePage)} />
-                <Route path='/login' component={noRequireAuth(Login)} />
-                <Route path='/parking_reserve' component={noRequireAuth(ParkingReserve)} />
-                <Route path='/register' component={noRequireAuth(Register)} />
-                <Route path='/signout' component={noRequireAuth(Signout)} />
-                <Route component={NotFoundPage} /> */}
-            {/* </Switch> */}
+            <Switch>
+                <Route path="/login" component={Login} />
+                <ProtectedRoute exact path="/" component={Projects} />
+                <ProtectedRoute path="/projects" component={Projects} />
+                <ProtectedRoute path="/structures" component={Structures} />
+                <ProtectedRoute path="/substructure" component={Substructure} />
+            </Switch>
         </Grid>
     )
 }

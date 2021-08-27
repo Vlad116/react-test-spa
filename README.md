@@ -1,6 +1,6 @@
 # :rocket: react-test-spa
 
-SPA на React.js mobx/react-router/material-ui/typescript
+SPA на React.js mobx/react-router/material-ui/typescript :construction: Work in progress.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
